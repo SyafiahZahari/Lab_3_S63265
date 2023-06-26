@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 Lab Front End</title>
+    <style>
+        p {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function changeColor(event) {
+            var paragraph = document.getElementById("myP");
+            switch (event.type) {
+                case "click":
+                    paragraph.style.backgroundColor = "yellow";
+                    break;
+                case "dblclick":
+                    paragraph.style.backgroundColor = "blue";
+                    break;
+                case "mouseover":
+                    paragraph.style.backgroundColor = "red";
+                    break;
+                case "mouseout":
+                    paragraph.style.backgroundColor = "green";
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p id="myP" onclick="changeColor(event)" ondblclick="changeColor(event)" onmouseover="changeColor(event)"
+        onmouseout="changeColor(event)">Hello world, This is Dahlia!</p>
+</body>
+</html>
